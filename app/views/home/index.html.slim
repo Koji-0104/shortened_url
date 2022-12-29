@@ -1,0 +1,11 @@
+h1 Home#index
+
+h4 test
+
+= form_with url: home_update_path, method: :post, local: false do |f|
+  button[type="submit" name="test"]
+    | 送信
+
+
+#form_area
+  = render partial: 'home/text_form', locals: {current_time: @current_time}
