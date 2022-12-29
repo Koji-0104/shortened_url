@@ -1,0 +1,6 @@
+
+.current_time.m-2
+= current_time
+
+= form_with url: home_update_path, local: false do |f|
+  = f.text_field :text, class: 'form-control test_form'

@@ -2,6 +2,19 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.4'
+gem 'shortener'
+gem 'slim-rails'
+gem 'html2slim'
+gem 'jquery-rails'
+
+  # Debugger
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'byebug'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
