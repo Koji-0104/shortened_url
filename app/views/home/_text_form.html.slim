@@ -3,4 +3,18 @@
 = current_time
 
 = form_with url: home_update_path, local: false do |f|
-  = f.text_field :text, class: 'form-control test_form'
+  = f.text_area :text, class: 'form-control test_form'
+
+
+.main
+  #conmenu
+    ul
+      li.list-group-item
+        a[href="https://mebee.info/" target="_blank"]
+          | mebee
+      li.list-group-item
+        | test1
+      li.list-group-item
+        | test2
+  #rightclick.d-inline.p-2.bg-primary.text-white.rightclick
+    | オリジナル右クリックエリア

@@ -13,3 +13,41 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+
+$(document).on('turbolinks:load', function() {
+  // 右クリック禁止
+  document.oncontextmenu = function () { return false; }
+
+  //オリジナル コンテキストメニュー
+  let con = document.getElementById('conmenu');
+
+  //対象エリア
+  let rightclick = document.getElementById('rightclick');
+
+  //body部
+  let body = document.body;
+
+  //コンテキストメニューを表示する
+  $(document).on('contextmenu', '.rightclick', function(e){
+
+    //マウスの位置を使ってスタイルを設定する
+    con.style.left = e.pageX + 'px';
+    con.style.top = e.pageY + 'px';
+
+    //メニューをblockで表示
+    con.classList.add('show');
+
+  });
+
+  //左クリックで非表示に変更
+  $(document).on('click', function (e) {
+
+    if (con.classList.contains('show')) {
+      //非表示に戻す
+      con.classList.remove('show');
+    }
+
+  });
+});

@@ -1,1 +1,13 @@
-$('#form_area').html('<%= render partial: 'home/text_form', locals: { current_time: @current_time }%>')
+$('#form_area').html('<%= j(render partial: "home/text_form", locals: { current_time: @current_time })%>')
+
+
+$(document).on('contextmenu', '.rightclick', function(e){
+  let con = document.getElementById('conmenu');
+  //マウスの位置を使ってスタイルを設定する
+  con.style.left = e.pageX + 'px';
+  con.style.top = e.pageY + 'px';
+
+  //メニューをblockで表示
+  con.classList.add('show');
+
+});
